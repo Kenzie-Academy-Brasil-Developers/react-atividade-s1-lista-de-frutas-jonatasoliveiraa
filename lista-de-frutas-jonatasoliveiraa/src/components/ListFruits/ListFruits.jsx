@@ -1,12 +1,7 @@
-import { useState } from "react";
 import "./style.css";
 
-const ListFruits = () => {
-  const [fruits, setFruits] = useState([
-    { name: "banana", color: "yellow", price: 2 },
-    { name: "cherry", color: "red", price: 3 },
-    { name: "strawberry", color: "red", price: 4 },
-  ]);
+const ListFruits = ({fruits,setFruits}) => {
+ 
 
   function filterRedFruits(){
     setFruits(fruits.filter(elem => elem.color === "red"))
